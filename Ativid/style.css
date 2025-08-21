@@ -1,0 +1,30 @@
+@charset "UTF-8";
+*{
+   margin: 0;
+   padding: 0;
+}
+
+
+:root {
+  --cor-principal: #f8b5d5;
+  --cor-secundaria: #fce4ec;
+  --cor-detalhes: #e91e63;
+  --cor-detalhes-escuro: #7b1fa2;
+  --light: #fff9fb;
+  --cor-texto: #4a2a3a;
+}
+
+body {
+font-family: 'poppins', sans-serif;
+background-color: var(--light);
+color: var(--cor-tex);
+line-height:1.6 ;
+
+}
+.container{
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 15px;
+
+}
