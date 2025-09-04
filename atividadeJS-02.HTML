@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Boas-vindas </h1>
+
+</body>
+</html>
+
+
+<script>
+    function solicitarInformacoes() {
+      const nome = prompt("Olá! Qual é o seu nome?");
+      
+      if (nome) {
+        const idade = prompt(`Prazer, ${nome}! Quantos anos você tem?`);
+        
+        if (idade) {
+          alert(`Que maravilha, ${nome} tem ${idade} anos!`);
+        } else {
+          alert(`Tudo bem, ${nome}, você preferiu não informar a idade.`);
+        }
+      } else {
+        alert("Você não informou seu nome.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="solicitarInformacoes()">Clique aqui</button>
+</body>
+</html>

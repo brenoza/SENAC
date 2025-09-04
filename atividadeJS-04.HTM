@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Boas-vindas</h1>
+
+
+  <button onclick="calcularTroco()">Comprar Produto</button>
+
+  <script>
+    function calcularTroco() {
+      // Solicita o nome do produto
+      const produto = prompt("Qual é o nome do produto que está sendo comprado?");
+      if (!produto) return alert("Operação cancelada.");
+
+      // Solicita o preço do produto
+      const precoStr = prompt(`Qual é o preço do produto "${produto}"?`);
+      const preco = parseFloat(precoStr.replace(",", "."));
+      if (isNaN(preco) || preco <= 0) return alert("Preço inválido.");
+
+      // Solicita o valor entregue pelo cliente
+      const pagoStr = prompt("Quanto em dinheiro o cliente entregou?");
+      const pago = parseFloat(pagoStr.replace(",", "."));
+      if (isNaN(pago) || pago < preco) return alert("Valor insuficiente para pagamento.");
+
+      // Calcula o troco
+      const troco = pago - preco;
+
+      // Exibe a mensagem final
+      alert(`Você comprou ${produto}, que custa R$${preco.toFixed(2)}. Deu R$${pago.toFixed(2)} em dinheiro e vai receber R$${troco.toFixed(2)} de troco! Volte sempre!`);
+    }
+  </script>
+</body>
+</html>
+
+</body>
+</html>
