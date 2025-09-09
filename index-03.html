@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mensagem"></div>
+
+  <script>
+    // Solicita a idade do usuário
+    const idade = prompt("Digite sua idade:");
+
+    // Converte a entrada para número
+    const idadeNum = parseInt(idade);
+
+    // Verifica se é um número válido
+    if (!isNaN(idadeNum)) {
+      // Verifica se é maior ou menor de idade
+      const mensagem = idadeNum >= 18
+        ? "Você é maior de idade."
+        : "Você é menor de idade.";
+
+      // Exibe a mensagem no HTML
+      document.getElementById("mensagem").textContent = mensagem;
+    } else {
+      // Mensagem de erro caso a entrada não seja válida
+      document.getElementById("mensagem").textContent =
+        "Por favor, insira uma idade válida.";
+    }
+  </script>
+</body>
+</html>

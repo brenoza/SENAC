@@ -3,32 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introdução à JS</title>
+    <title>Document</title>
 </head>
 <body>
 
-    <style>
-button {
+    <h1>Bom dia</h1>
+  <div id="mensagem"></div>
 
-padding: 20px;
-background-color: pink;
+  <script>
+    // Solicita o nome do usuário
+    const nome = prompt("Digite seu nome:");
 
-
-}
-    </style>
-
-</head>
-<body>
-    
-
-    <h1>JavaScript</h1>
-    <button onclick="clicou()">Clique AQUI!</button>
-
-    <script>
-        function clicou(){
-alert('Obrigada por clicar')
-
-        }     
-    </script>
+    // Verifica se o nome foi preenchido
+    if (nome && nome.trim() !== "") {
+      // Exibe a mensagem personalizada
+      document.getElementById("mensagem").textContent =
+        `Olá, ${nome}! Seja bem-vindo(a) ao nosso site.`;
+    } else {
+      // Mensagem alternativa caso o nome não seja informado
+      document.getElementById("mensagem").textContent =
+        "Olá! Seja bem-vindo(a) ao nosso site.";
+    }
+  </script>
+  
 </body>
 </html>

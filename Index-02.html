@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+ 
+
+  <button onclick="incrementar()">Clique aqui</button>
+  <div id="contador">Você clicou 0 vezes.</div>
+
+  <script>
+    let totalCliques = 0;
+
+    function incrementar() {
+      totalCliques++;
+      document.getElementById("contador").textContent =
+        `Você clicou ${totalCliques} ${totalCliques === 1 ? 'vez' : 'vezes'}.`;
+    }
+  </script>
+</body>
+</html>
