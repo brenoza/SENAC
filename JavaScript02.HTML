@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+  <h1>Conversor de Temperatura</h1>
+  <button onclick="converterTemperatura()">Converter Temperatura</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function converterTemperatura() {
+      const entrada = prompt("Digite a temperatura em graus Celsius (°C):");
+      const celsius = parseFloat(entrada.replace(",", "."));
+
+      if (isNaN(celsius)) {
+        alert("Por favor, insira um valor numérico válido.");
+        return;
+      }
+
+      const kelvin = celsius + 273.15;
+      const fahrenheit = (celsius * 9/5) + 32;
+
+      const resultadoHTML = `
+        <p>A temperatura de <strong>${celsius.toFixed(2)}°C</strong> corresponde a:</p>
+        <p>${kelvin.toFixed(2)} K</p>
+        <p>${fahrenheit.toFixed(2)} °F</p>
+      `;
+
+      document.getElementById("resultado").innerHTML = resultadoHTML;
+    }
+  </script>
+</body>
+</html>

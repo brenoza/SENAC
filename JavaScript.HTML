@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conversor de Distância</h1>
+  <button onclick="converterDistancia()">Converter Distância</button>
+
+  <script>
+    function converterDistancia() {
+      const distancia = prompt("Digite a distância em metros:");
+      if (distancia !== null && distancia.trim() !== "") {
+        alert(`Você digitou ${distancia} metros.`);
+        // Aqui você pode adicionar lógica para converter para outras unidades, se quiser.
+      } else {
+        alert("Nenhuma distância foi informada.");
+      }
+    }
+  </script>
+</body>
+</html>
