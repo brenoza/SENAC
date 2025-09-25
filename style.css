@@ -1,0 +1,59 @@
+input[type="number"]:focus {
+}
+button {
+background-color: #61dafb;
+color: #282c34;
+border: none;
+padding: 12px 25px;
+border-radius: 5px;
+font-size: 1.1em;
+cursor: pointer;
+transition: background-color 0.3s ease; /* animação suave ao passar o mouse */
+
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+.resultado-area p {
+font-size: 1.05em;
+margin-top: 15px;
+padding: 5px;
+border-radius: 3px;
+
+}
+.mensagem {
+font-weight: bold;
+color: aliceblue;
+
+}
+.palpites-anteriores {
+font-size: 0.9em;
+color: aliceblue;
+
+}
+.dica {
+font-style: italic;
+color: #ffeb3b;
+
+}
+.hidden {
+
+    display: none; /* Classe para esconder elementos */
+}
+
+@keyframes FlashGreen {
+0%{ background-color: transparent; }
+50%{ background-color: rgba(76, 175, 80, 0.3); }
+100%{ background-color: transparent; }
+}
+.flash-green {
+    animation: flashGreen 0.5s ease-in-out;
+}
+.flash-red {
+    animation: Flashgreen 0.5s ease-in-out;
+}
+
+
+
+
